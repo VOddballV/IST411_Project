@@ -139,6 +139,9 @@ productDescriptionBox{
 	background-color: black;
 	height: 50px;
 	color: white;
+        
+        position: relative;
+        clear:both;
 }
 #footer p{
 	margin: 5px 0 0 12%;
