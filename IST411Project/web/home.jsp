@@ -18,7 +18,7 @@
                 <nav>
                     <ul>
                         <li><a href="redirect.jsp" class="current">Home</a></li>
-                        <li><a href="#" id = "checkout" onclick = "toCheckout">Checkout</a></li>
+                        <li><a href="#" id = "checkout" onclick = "toCheckout()">Checkout</a></li>
                     </ul>
                 </nav>
             </div>
@@ -93,7 +93,7 @@
 	</div>
         <script>
                 function toCheckout() {
-                window.location = '/.jsp';
+                window.document.location.href="checkout.jsp";
                 }
                 function toProduct() {
                 window.document.location.href="product.jsp";
