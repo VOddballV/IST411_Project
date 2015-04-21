@@ -15,51 +15,46 @@
         <h1>Order Summary:</h1>
         <hr>
         <%
-             /* This code will check to see if the user has given a name
-                if no name was given, it prompts the user to enter a name
-                once the user enters a name, it will then output the name
-                when the submit button is pressed */
-             
-          if (request.getParameter("fName") == null) {
+             if (request.getParameter("fName") == null) {
         out.println("First Name N/A.");
     } else {
-        out.println(request.getParameter("fName")+"</b>!");
+        out.println(request.getParameter("fName"));
     }
           
           if (request.getParameter("lName") == null) {
         out.println("Last Name N/A.");
     } else {
-        out.println(request.getParameter("lName")+"</b>!");
+        out.println(request.getParameter("lName"));
     }
           
           if (request.getParameter("street") == null) {
         out.println("Street Address N/A.");
     } else {
-        out.println(request.getParameter("street")+"</b>!");
+        out.println(request.getParameter("street"));
     }
           
           if (request.getParameter("state") == null) {
         out.println("State N/A.");
     } else {
-        out.println(request.getParameter("state")+"</b>!");
+        out.println(request.getParameter("state"));
     }
           
           if (request.getParameter("zip") == null) {
         out.println("Zip N/A.");
     } else {
-        out.println(request.getParameter("zip")+"</b>!");
+        out.println(request.getParameter("zip"));
     }
           
           if (request.getParameter("phone") == null) {
         out.println("Phone Number N/A");
     } else {
-        out.println(request.getParameter("phone")+"</b>!");
+        out.println(request.getParameter("phone"));
     }
           
           if (request.getParameter("email") == null) {
         out.println("Email Address N/A");
     } else {
-        out.println(request.getParameter("email")+"</b>!");
+        out.println(request.getParameter("email"));
     }
 %>
 <hr>

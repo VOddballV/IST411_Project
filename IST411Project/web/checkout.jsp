@@ -45,7 +45,12 @@
            </div>
             <div id="footer"/>
          <script>
-             function submitBtn(){
+            
+                /* This code will check to see if the user has given the required
+                parameters. if any were not given, it will ask the user to enter
+                all of the required fields */
+    
+                function submitBtn(){
                  if (("fName") = null || ("lName") = null
                  || ("street") = null || ("state") = null
                  || ("zip") = null || ("phone") = null
@@ -54,7 +59,6 @@
                     } else {
                         // CONNECT TO CONFIRMATION PAGE HERE
                     }
-%>
              }
          </script>
     </body>  
