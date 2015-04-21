@@ -33,12 +33,12 @@
             <input type="text" placeholder="State" name="state">
             <input type="text" placeholder="Zipcode" name="zip"><br>
             <input type="text" placeholder="Phone ex:(717-873-5828)" name="phone"><br>
-            <input type="text" placeholder="email" name="email"><br>
-        <hr>
+            <input type="text" placeholder="Email" name="email"><br><br>
+        
         <select>
-            <option value="Credit/Debit">Credit</option>
-            <option value="Paypal">Paypal</option>
+            <option value="Credit">Credit</option>
         </select>
+        <input type="text" placeholder="Credit Card Number" name="cardNumber"><br><br>
         <hr>
             <button onclick="submitBtn()">Submit</button><br>
         </form>
@@ -49,7 +49,7 @@
                  if (("fName") = null || ("lName") = null
                  || ("street") = null || ("state") = null
                  || ("zip") = null || ("phone") = null
-                 ||  ("email") = null) {
+                 ||  ("email") = null || ("cardNumber" = null)) {
                     out.println("Please Enter All Required Fields.");
                     } else {
                         // CONNECT TO CONFIRMATION PAGE HERE
