@@ -8,10 +8,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Resources/css/style.css" />
         <title>Store Checkout Page</title>
     </head>
+
     <body>
+        <div id="wrapper">
+            <div id="header">
+                <h1><a href="home.jsp">The Electronics Store</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="redirect.jsp" class="current">Home</a></li>
+                        <li><a href="#" id = "checkout" onclick = "toCheckout()">Checkout</a></li>
+                    </ul>
+                </nav>
+            </div>
+           <div id="productWrapper">
          <h1>Checkout</h1>
         <form name="frm" method="post" action="checkout.jsp">
             <input type="text" placeholder="First Name" name="fName">
@@ -29,6 +42,8 @@
         <hr>
             <button onclick="submitBtn()">Submit</button><br>
         </form>
+           </div>
+            <div id="footer"/>
          <script>
              function submitBtn(){
                  if (("fName") = null || ("lName") = null
