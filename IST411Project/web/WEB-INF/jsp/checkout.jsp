@@ -16,16 +16,31 @@
         <form name="frm" method="post" action="checkout.jsp">
             <input type="text" placeholder="First Name" name="fName">
             <input type="text" placeholder="Last Name" name="lName"><br>
-        <input type="text" placeholder="Street Address" name="streetAddress">
-        <input type="text" placeholder="State" name="state">
-        <input type="text" placeholder="Zipcode" name="zip"><br>
-        <input type="text" placeholder="Phone ex:(717-873-5828)" name="Phone"><br>
-        <input type="text" placeholder="email" name="email"><br>
+            <input type="text" placeholder="Street Address" name="street">
+            <input type="text" placeholder="State" name="state">
+            <input type="text" placeholder="Zipcode" name="zip"><br>
+            <input type="text" placeholder="Phone ex:(717-873-5828)" name="phone"><br>
+            <input type="text" placeholder="email" name="email"><br>
         <hr>
         <select>
             <option value="Credit/Debit">Credit</option>
             <option value="Paypal">Paypal</option>
         </select>
         <hr>
-    </body>
+            <button onclick="submitBtn()">Submit</button><br>
+        </form>
+         <script>
+             function submitBtn(){
+                 if (("fName") = null || ("lName") = null
+                 || ("street") = null || ("state") = null
+                 || ("zip") = null || ("phone") = null
+                 ||  ("email") = null) {
+                    out.println("Please Enter All Required Fields.");
+                    } else {
+                        // CONNECT TO CONFIRMATION PAGE HERE
+                    }
+%>
+             }
+         </script>
+    </body>  
 </html>
