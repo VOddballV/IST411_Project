@@ -28,7 +28,7 @@
                         <h1>Product 1</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct" onclick = "toProduct()">View Product</a>
+                        <a href="#" class="viewProduct" action="DBServlet" method="post">View Product</a>
                 </product>
                 <product>
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
@@ -93,11 +93,14 @@
 	</div>
         <script>
                 function toCheckout() {
-                window.document.location.href="checkout.jsp";
+                    window.document.location.href="checkout.jsp";
                 }
-                function toProduct() {
-                window.document.location.href="product.jsp";
+                function toDBServlet() {
+                    document.location.href="/Servlets/DBServlet.java";
                 }
+                //function toProduct() {
+                //window.document.location.href="product.jsp";
+                //}
 </script>
     </body>
 </html>
