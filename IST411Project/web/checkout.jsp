@@ -19,8 +19,8 @@
                 <h1><a href="home.jsp">The Electronics Store</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="redirect.jsp" class="current">Home</a></li>
-                        <li><a href="#" id = "checkout" onclick = "toCheckout()">Checkout</a></li>
+                        <li><a href="redirect.jsp" >Home</a></li>
+                        <li><a href="#" class="current" id = "checkout" onclick = "toCheckout()">Checkout</a></li>
                     </ul>
                 </nav>
             </div>
