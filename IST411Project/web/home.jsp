@@ -24,11 +24,14 @@
             </div>
             <div id="productWrapper">
                 <product>
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 1</h1>
-                        <p>Product description.</p>
-                        <p>$9.99</p>
-                        <a href="#" class="viewProduct" action="DBServlet" method="post">View Product</a>
+                        <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
+                            <h1>Product 1</h1>
+                            <p>Product description.</p>
+                            <p>$9.99</p>
+                            <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(1)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="1" >
+                            </form>
                 </product>
                 <product>
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
@@ -95,8 +98,11 @@
                 function toCheckout() {
                     window.document.location.href="checkout.jsp";
                 }
-                function toDBServlet() {
-                    document.location.href="/Servlets/DBServlet.java";
+                function toDBServlet(productNum) {
+                    //document.forms[0].createAttribute("ProductInfo");
+                    //document.forms[0].setAttribute("ProductInfo", productNum);
+                    document.forms[0].action = "DBServlet";
+                    document.forms[0].submit();
                 }
                 //function toProduct() {
                 //window.document.location.href="product.jsp";

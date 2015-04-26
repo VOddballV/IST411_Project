@@ -3,10 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SourcePackages;
+package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,18 +32,33 @@ throws ServletException, IOException  {
 
     try {
         
-        String productID;
-        productID = req.getParameter("IDnum");
-        getServletConfig().getServletContext().getRequestDispatcher(
-        "product.jsp").forward(req,res);
+        String productName;
+        String imageLink;
+        String productID = (String) req.getParameter("ProductInfo");
 
-    } catch (ServletException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
+        List resultSet = Servlets.ExecuteExample.main(productID);
+        //String resultSetString = resultSet.toString();
+        int size = resultSet.size();
+        for (int i=0; i<size-1; i++) {
+            productName = resultSet.get(0).toString();
+            imageLink = resultSet.get(1).toString();
+        }
+        
+        getServletConfig().getServletContext().getRequestDispatcher(
+        "/product.jsp").forward(req,res);
+        
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
-    }
+    }   
   }
+    
+    
+        public void doPost(HttpServletRequest req, HttpServletResponse res)
+throws ServletException, IOException  {
+            
+            
+            
+        }
 }
  

@@ -16,13 +16,13 @@
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
-        	<servlet>
-		<servlet-name>DBServletName</servlet-name>
+	<servlet>
+		<servlet-name>toDBServlet</servlet-name>
 		<servlet-class>Servlets.DBServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>DBServletName</servlet-name>
+		<servlet-name>toDBServlet</servlet-name>
 		<url-pattern>/DBServlet</url-pattern>
 	</servlet-mapping>
     <session-config>
