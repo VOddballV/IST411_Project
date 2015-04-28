@@ -17,7 +17,7 @@ import javax.jws.WebParam;
 public class ShippingWebService {
 
     /**
-     * This is a sample web service operation
+     * This Web Service takes a shipping choice from the user and returns the cost based on their choice.
      */
     @WebMethod(operationName = "getShippingCost")
     public int getShippingCost(@WebParam(name = "getShippingCost") int shippingChoice) {
