@@ -25,6 +25,17 @@
 		<servlet-name>toDBServlet</servlet-name>
 		<url-pattern>/DBServlet</url-pattern>
 	</servlet-mapping>
+        
+        	<servlet>
+		<servlet-name>toConfirm</servlet-name>
+		<servlet-class>Servlets.ConfirmServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>toDBServlet</servlet-name>
+		<url-pattern>/ConfirmServlet</url-pattern>
+	</servlet-mapping>
+        
     <session-config>
         <session-timeout>
             30
