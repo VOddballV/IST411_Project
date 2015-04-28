@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="Resources/css/style.css" />
         <title>Store Checkout Page</title>
     </head>
-
+    
     <body>
         <div id="wrapper">
             <div id="header">
@@ -24,42 +24,53 @@
                     </ul>
                 </nav>
             </div>
-           <div id="productWrapper">
-         <h1>Checkout</h1>
-        <form name="frm" method="post" action="checkout.jsp">
-            <input type="text" placeholder="First Name" name="fName">
-            <input type="text" placeholder="Last Name" name="lName"><br>
-            <input type="text" placeholder="Street Address" name="street">
-            <input type="text" placeholder="State" name="state">
-            <input type="text" placeholder="Zipcode" name="zip"><br>
-            <input type="text" placeholder="Phone ex:(717-873-5828)" name="phone"><br>
-            <input type="text" placeholder="Email" name="email"><br><br>
-        
-        <select>
-            <option value="Credit">Credit</option>
-        </select>
-        <input type="text" placeholder="Credit Card Number" name="cardNumber"><br><br>
-        <hr>
-            <button onclick="submitBtn()">Submit</button><br>
-        </form>
-           </div>
-            <div id="footer"/>
-         <script>
-            
-                /* This code will check to see if the user has given the required
-                parameters. if any were not given, it will ask the user to enter
-                all of the required fields */
-    
-                function submitBtn(){
-                 if (("fName") = null || ("lName") = null
-                 || ("street") = null || ("state") = null
-                 || ("zip") = null || ("phone") = null
-                 ||  ("email") = null || ("cardNumber" = null)) {
-                    out.println("Please Enter All Required Fields.");
-                    } else {
-                        // CONNECT TO CONFIRMATION PAGE HERE
-                    }
-             }
-         </script>
+            <div id="productWrapper">
+                <h1>Checkout</h1>
+                <form>
+                    <input type="radio" name="shippingChoice" value="1" checked> Ground Shipping<br>
+                    <input type="radio" name="shippingChoice" value="2"> 2 Day Shipping<br>
+                    <input type="radio" name="shippingChoice" value="3"> Next Day Shipping<br>
+                </form>
+                <br>
+                <hr>
+                <br>
+                <form name="frm" method="post" action="checkout.jsp">
+                    <input type="text" placeholder="First Name" name="fName">
+                    <input type="text" placeholder="Last Name" name="lName"><br>
+                    <input type="text" placeholder="Street Address" name="street">
+                    <input type="text" placeholder="State" name="state">
+                    <input type="text" placeholder="Zipcode" name="zip"><br>
+                    <input type="text" placeholder="Phone ex:(717-873-5828)" name="phone"><br>
+                    <input type="text" placeholder="Email" name="email"><br><br>
+
+                    <select>
+                        <option value="Credit">Credit</option>
+                    </select>
+                    <input type="text" placeholder="Credit Card Number" name="cardNumber"><br><br>
+                    <hr>
+                    <br>
+                    <button onclick="submitBtn()">Submit</button><br>
+                </form>
+            </div>
+            <div id="footer">
+                <p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
+            </div>
+        </div>
+        <script>    
+            /* This code will check to see if the user has given the required
+            parameters. if any were not given, it will ask the user to enter
+            all of the required fields */
+
+            function submitBtn(){
+             if (("fName") = null || ("lName") = null
+             || ("street") = null || ("state") = null
+             || ("zip") = null || ("phone") = null
+             ||  ("email") = null || ("cardNumber" = null)) {
+                out.println("Please Enter All Required Fields.");
+                } else {
+                    // CONNECT TO CONFIRMATION PAGE HERE
+                }
+            }
+        </script>
     </body>  
 </html>

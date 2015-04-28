@@ -95,19 +95,19 @@
             </div>
 	</div>
         <script>
-                function toCheckout() {
-                    window.document.location.href="checkout.jsp";
-                }
-                function toDBServlet(productNum) {
-                    //document.forms[0].createAttribute("ProductInfo");
-                    //document.forms[0].setAttribute("ProductInfo", productNum);
-                    document.forms[0].action = "DBServlet";
-                    document.forms[0].submit();
-                }
-                //function toProduct() {
-                //window.document.location.href="product.jsp";
-                //}
-</script>
+            function toCheckout() {
+                window.document.location.href="checkout.jsp";
+            }
+            function toDBServlet(productNum) {
+                //document.forms[0].createAttribute("ProductInfo");
+                //document.forms[0].setAttribute("ProductInfo", productNum);
+                document.forms[0].action = "DBServlet";
+                document.forms[0].submit();
+            }
+            //function toProduct() {
+            //window.document.location.href="product.jsp";
+            //}
+        </script>
     </body>
 </html>
 
