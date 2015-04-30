@@ -28,25 +28,25 @@ public class ConfirmServlet extends HttpServlet {
 
     
     public void doGet(HttpServletRequest req, HttpServletResponse res)
-throws ServletException, IOException  {
+    throws ServletException, IOException  {
 
-    try {
-        
-        String confirmationNum;
-        confirmationNum = (String) req.getParameter("ConfirmationInfo");
-        
-    } catch (Exception e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }   
-  }
+        try {
+
+            String confirmationNum;
+            confirmationNum = (String) req.getParameter("ConfirmationInfo");
+
+        } catch (Exception e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }   
+    }
     
     
-        public void doPost(HttpServletRequest req, HttpServletResponse res)
-throws ServletException, IOException  {
-            
-            
-            
-        }
-}
- 
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
+    throws ServletException, IOException  {
+
+
+
+            }
+    }
+
