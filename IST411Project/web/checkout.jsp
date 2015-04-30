@@ -26,13 +26,21 @@
             </div>
             <div id="productWrapper">
                 <h1>Checkout</h1>
+                <br>
+                <hr>
+                <br>
+                <h3>Choose Shipping:</h3><br>
                 <form>
                     <input type="radio" name="shippingChoice" value="1" checked> Ground Shipping<br>
                     <input type="radio" name="shippingChoice" value="2"> 2 Day Shipping<br>
-                    <input type="radio" name="shippingChoice" value="3"> Next Day Shipping<br>
+                    <input type="radio" name="shippingChoice" value="3"> Next Day Shipping<br><br>
+                    <input type="text" name="cost" placeholder="Your Shipping Cost" readonly>
+                    <button name="update" onclick="">Update</button>
                 </form>
                 <br>
                 <hr>
+                <br>
+                <h3>Enter Information:</h3>
                 <br>
                 <form name="frm" method="post" action="checkout.jsp">
                     <input type="text" placeholder="First Name" name="fName">
@@ -71,6 +79,25 @@
                     // CONNECT TO CONFIRMATION PAGE HERE
                 }
             }
+            
+            function updateShippingCost(){
+                getShippingCost(value);
+            }
+            
+            function toCheckout() {
+                window.document.location.href="checkout.jsp";
+            }
+            function toDBServlet(productNum) {
+                //document.forms[0].createAttribute("ProductInfo");
+                //document.forms[0].setAttribute("ProductInfo", productNum);
+                document.forms[0].action = "DBServlet";
+                document.forms[0].submit();
+            }
+            //function toProduct() {
+            //window.document.location.href="product.jsp";
+            //}
+            
         </script>
     </body>  
 </html>
+

@@ -22,7 +22,7 @@ public class ShippingWebService {
     @WebMethod(operationName = "getShippingCost")
     public int getShippingCost(@WebParam(name = "getShippingCost") int shippingChoice) {
         
-        //determines the shipping cost based on the user's choice
+        //determines the shipping cost based on the user's choice of 1,2,or 3
         if(shippingChoice == 1){
             return 5;
         }else if(shippingChoice == 2){
