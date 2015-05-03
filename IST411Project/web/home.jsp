@@ -29,7 +29,7 @@
                             <p>Product description.</p>
                             <p>$9.99</p>
                             <form method="get">
-                            <a href="#" class="viewProduct" onclick="toDBServlet(1)">View Product</a>
+                            <a href="#" class="viewProduct" onclick="toDBServlet(0)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="1" >
                             </form>
                 </product>
@@ -38,56 +38,90 @@
                         <h1>Product 2</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(1)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="2" >
+                        </form>
                 </product>
                 <product class="rightcl">
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
                         <h1>Product 3</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(2)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="3" >
+                        </form>
                 </product>
                 <product>
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
                         <h1>Product 4</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(3)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="4" >
+                        </form>
                 </product>
                 <product>
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
                         <h1>Product 5</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(4)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="5" >
+                        </form>
                 </product>
                 <product class="rightcl">
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
                         <h1>Product 6</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(5)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="6" >
+                        </form>
                 </product>
                 <product>
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
                         <h1>Product 7</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(6)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="7" >
+                        </form>
                 </product>
                 <product>
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
                         <h1>Product 8</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(7)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="8" >
+                        </form>
                 </product>
                 <product class="rightcl">
                     <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
                         <h1>Product 9</h1>
                         <p>Product description.</p>
                         <p>$9.99</p>
-                        <a href="#" class="viewProduct">View Product</a>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(8)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="9" >
+                        </form>
+                </product>
+                <product class="rightcl">
+                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
+                        <h1>Product 10</h1>
+                        <p>Product description.</p>
+                        <p>$9.99</p>
+                        <form method="get">
+                            <a href="#" class="viewProduct" onclick="toDBServlet(9)">View Product</a>
+                            <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="10" >
+                        </form>
                 </product>
             </div>
             <div id="footer">
@@ -95,19 +129,20 @@
             </div>
 	</div>
         <script>
-            function toCheckout() {
-                window.document.location.href="checkout.jsp";
-            }
-            function toDBServlet(productNum) {
-                //document.forms[0].createAttribute("ProductInfo");
-                //document.forms[0].setAttribute("ProductInfo", productNum);
-                document.forms[0].action = "DBServlet";
-                document.forms[0].submit();
-            }
-            //function toProduct() {
-            //window.document.location.href="product.jsp";
-            //}
-        </script>
+                function toCheckout() {
+                    window.document.location.href="checkout.jsp";
+                }
+                function toDBServlet(productNum) {
+                    //integer productNumSend = productNum;
+                    //document.forms[0].createAttribute("ProductInfo");
+                    //document.forms[0].setAttribute("ProductInfo", productNum);
+                    document.forms[productNum].action = "DBServlet";
+                    document.forms[productNum].submit();
+                }
+                //function toProduct() {
+                //window.document.location.href="product.jsp";
+                //}
+</script>
     </body>
 </html>
 
