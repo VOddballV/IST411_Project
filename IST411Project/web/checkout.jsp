@@ -35,7 +35,7 @@
                     <input type="radio" name="shippingChoice" value="2"> 2 Day Shipping<br>
                     <input type="radio" name="shippingChoice" value="3"> Next Day Shipping<br><br>
                     <input type="text" name="cost" placeholder="Your Shipping Cost" readonly>
-                    <button name="update" onclick="">Update</button>
+                    <button name="update" onclick="updateShippingCost()">Update</button>
                 </form>
                 <br>
                 <hr>
@@ -70,15 +70,28 @@
             all of the required fields */
 
             function submitBtn(){
-             if (("fName") = null || ("lName") = null
-             || ("street") = null || ("state") = null
-             || ("zip") = null || ("phone") = null
-             ||  ("email") = null || ("cardNumber" = null)) {
-                out.println("Please Enter All Required Fields.");
-                } else {
-                    // CONNECT TO CONFIRMATION PAGE HERE
-                }
-            }
+             if ("fName" = null){
+                out.println("Please Enter Your First Name.");
+             } else if ("lName" = null){
+                out.println("Please Enter Your Last Name.");   
+             } else if ("street" = null){
+                out.println("Please Enter Your Street Address.")
+             } else if ("state" = null){
+                out.println("Please Enter Your State.")
+             } else if ("zip" = null){
+                out.println("Please Enter Your Zip Code.")
+             } else if ("phone" = null){
+                out.println("Please Enter Your Phone Number.")
+             } else if ("email" = null){
+                out.println("Please Enter Your Email Address.")
+             } else {
+                /*Send information to Echo Server using socket
+                 *Read true, or false from socket
+                 *If true, then go to confirmation page
+                 *If flase, display invalid card number*/
+             } //end if else
+            
+            } // end submit button
             
             function updateShippingCost(){
                 getShippingCost(value);
