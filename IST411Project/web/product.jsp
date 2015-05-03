@@ -24,13 +24,12 @@
             </div>
             <div id="productWrapper">
                 <product>
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                    <h1>Product 1</h1>
+                <a href="#"><img src="Resources/<%= request.getAttribute("imageLinkJSP") %>"  alt=""/></a>
+                    <h1><%= request.getAttribute("productNameJSP") %></h1>
                     <p>$9.99</p>
                 </product>
                 <productDescriptionBox>
-                    <p>Bacon ipsum dolor amet prosciutto venison meatloaf spare ribs. Short loin pork belly tail sirloin bresaola kevin t-bone strip steak ball tip tongue ham turkey. Tongue strip steak cupim landjaeger beef ribs chuck, shoulder cow. Porchetta filet mignon tenderloin ribeye jowl meatloaf strip steak, ham hock bresaola fatback beef ribs chuck salami. Jowl t-bone ribeye turducken tri-tip, tongue shank. Beef landjaeger turducken ground round, drumstick corned beef andouille kevin t-bone sirloin tail. Doner short ribs spare ribs jowl, salami ball tip corned beef flank capicola frankfurter tongue boudin.
-                        Meatball jerky short loin sausage doner. Short ribs flank filet mignon turducken brisket, corned beef turkey t-bone ham meatloaf pork chop. Pastrami salami sausage beef doner ground round ball tip andouille beef ribs cupim pancetta sirloin ribeye kielbasa. Shoulder ham hock jerky tongue ball tip ground round chicken pig flank spare ribs.
+                    <p><%= request.getAttribute("productDescJSP") %>
                     </p>
                 </productDescriptionBox>
             </div>
