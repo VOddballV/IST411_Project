@@ -32,7 +32,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>toDBServlet</servlet-name>
+		<servlet-name>toConfirm</servlet-name>
 		<url-pattern>/ConfirmServlet</url-pattern>
 	</servlet-mapping>
         
