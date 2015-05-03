@@ -61,7 +61,7 @@
                     <input type="text" placeholder="Credit Card Number" name="cardNumber"><br><br>
                     <hr>
                     <br>
-                    <button onclick="submitBtn()">Submit</button><br>
+                    <button type="button" onclick="submitBtn()">Submit</button><br>
                 </form>
             </div>
             <div id="footer">
@@ -72,9 +72,11 @@
             /* This code will check to see if the user has given the required
             parameters. if any were not given, it will ask the user to enter
             all of the required fields */
+            var fName = document.getElementsByName('fName');
             function submitBtn(){
-             if (document.getElementById("fName") === null){
-                document.getElementById("mistakes").outerHTML = "Please Enter Your First Name."
+             if (fName.valueOf() === ""){
+                 document.getElementById("mistakes").textContent = "Please Enter Your First Name."
+                 return false;
              } else if ("lName" === null){
                 //out.println("Please Enter Your Last Name.");   
              } else if ("street" === null){
@@ -92,7 +94,10 @@
                  *Read true, or false from socket
                  *If true, then go to confirmation page
                  *If flase, display invalid card number*/
+                //document.forms[0].action = "ConfirmServlet";
+                //document.forms[0].submit();
              } //end if else
+            
             
             } // end submit button
             
@@ -112,8 +117,7 @@
             //function toProduct() {
             //window.document.location.href="product.jsp";
             //}
-            
-
+     
             function getCookie() {
                 var ca = document.cookie.split(';');
                 for(var i=0;i < ca.length;i++) {
