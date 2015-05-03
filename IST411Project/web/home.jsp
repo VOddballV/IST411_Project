@@ -24,9 +24,7 @@
             </div>
             <div id="productWrapper">
                 <product>
-                        <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                            <h1>Product 1</h1>
-                            <p>Product description.</p>
+                            <h1>Graphics Card</h1>
                             <p>$9.99</p>
                             <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(0)">View Product</a>
@@ -34,9 +32,7 @@
                             </form>
                 </product>
                 <product>
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 2</h1>
-                        <p>Product description.</p>
+                        <h1>Hard Drive</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(1)">View Product</a>
@@ -44,9 +40,7 @@
                         </form>
                 </product>
                 <product class="rightcl">
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 3</h1>
-                        <p>Product description.</p>
+                        <h1>Case</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(2)">View Product</a>
@@ -54,9 +48,7 @@
                         </form>
                 </product>
                 <product>
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 4</h1>
-                        <p>Product description.</p>
+                        <h1>Bloodborne</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(3)">View Product</a>
@@ -64,9 +56,7 @@
                         </form>
                 </product>
                 <product>
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 5</h1>
-                        <p>Product description.</p>
+                        <h1>Fallout 4</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(4)">View Product</a>
@@ -74,9 +64,7 @@
                         </form>
                 </product>
                 <product class="rightcl">
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 6</h1>
-                        <p>Product description.</p>
+                        <h1>Spy Fox</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(5)">View Product</a>
@@ -84,9 +72,7 @@
                         </form>
                 </product>
                 <product>
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 7</h1>
-                        <p>Product description.</p>
+                        <h1>PC</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(6)">View Product</a>
@@ -94,9 +80,7 @@
                         </form>
                 </product>
                 <product>
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 8</h1>
-                        <p>Product description.</p>
+                        <h1>PS4</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(7)">View Product</a>
@@ -104,9 +88,7 @@
                         </form>
                 </product>
                 <product class="rightcl">
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 9</h1>
-                        <p>Product description.</p>
+                        <h1>XboxOne</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(8)">View Product</a>
@@ -114,9 +96,7 @@
                         </form>
                 </product>
                 <product class="rightcl">
-                    <a href="#"><img src="Resources/images/new_product.jpg"  alt=""/></a>
-                        <h1>Product 10</h1>
-                        <p>Product description.</p>
+                        <h1>Atari</h1>
                         <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(9)">View Product</a>

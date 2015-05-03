@@ -29,6 +29,7 @@ public class DBServlet extends HttpServlet {
         public String productName;
         String imageLink;
         String productdesc;
+        String productID;
     
     public void doGet(HttpServletRequest req, HttpServletResponse res)
 throws ServletException, IOException  {
@@ -36,7 +37,7 @@ throws ServletException, IOException  {
     try {
         
 
-        String productID = (String) req.getParameter("ProductInfo");
+        productID = (String) req.getParameter("ProductInfo");
 
         List resultSet = Servlets.ExecuteExample.main(productID);
         //String resultSetString = resultSet.toString();
@@ -46,7 +47,7 @@ throws ServletException, IOException  {
             imageLink = resultSet.get(1).toString();
             productdesc = resultSet.get(2).toString();
         }    
-        
+        req.setAttribute("productIDJSP", productID);
         req.setAttribute("productNameJSP", productName);
         req.setAttribute("imageLinkJSP", imageLink);
         req.setAttribute("productDescJSP", productdesc);

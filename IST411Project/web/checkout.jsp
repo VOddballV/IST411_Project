@@ -27,6 +27,12 @@
             <div id="productWrapper">
                 <h1>Checkout</h1>
                 <br>
+                <h1>Shopping Cart</h1>
+                <br>
+                <h2 id="items"></h2>
+                <script>
+                    document.cookie
+                </script>
                 <hr>
                 <br>
                 <h3>Choose Shipping:</h3><br>
@@ -68,7 +74,6 @@
             /* This code will check to see if the user has given the required
             parameters. if any were not given, it will ask the user to enter
             all of the required fields */
-
             function submitBtn(){
              if ("fName" = null){
                 out.println("Please Enter Your First Name.");

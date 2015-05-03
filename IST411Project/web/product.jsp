@@ -18,14 +18,14 @@
                 <nav>
                     <ul>
                         <li><a href="redirect.jsp" class="current">Home</a></li>
-                        <li><a href="#">Checkout</a></li>
+                        <li><a href="checkout.jsp">Checkout</a></li>
                     </ul>
                 </nav>
             </div>
             <div id="productWrapper">
                 <product>
                 <a href="#"><img src="Resources/<%= request.getAttribute("imageLinkJSP") %>"  alt=""/></a>
-                    <h1><%= request.getAttribute("productNameJSP") %></h1>
+                    <h1 id="Name"><%= request.getAttribute("productNameJSP") %></h1>
                     <p>$9.99</p>
                 </product>
                 <productDescriptionBox>
@@ -33,11 +33,22 @@
                     </p>
                 </productDescriptionBox>
             </div>
+                    <button type="button" onclick="buy()"> BUY </button>
             <div id="footer">
                 <p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
             </div>
 	</div>
     </body>
+    <script>
+            function buy() {
+                
+                // sets the cookie cookie1/
+                document.cookie = document.getElementById("Name")
+                
+            document.location.href="checkout.jsp";
+        }
+
+    </script>
 </html>
 
 
