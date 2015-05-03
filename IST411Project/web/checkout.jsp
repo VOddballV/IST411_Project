@@ -29,10 +29,7 @@
                 <br>
                 <h1>Shopping Cart</h1>
                 <br>
-                <h2 id="items"></h2>
-                <script>
-                    document.cookie
-                </script>
+                <h1 id="items"></h1>
                 <hr>
                 <br>
                 <h3>Choose Shipping:</h3><br>
@@ -48,6 +45,7 @@
                 <br>
                 <h3>Enter Information:</h3>
                 <br>
+                <h4 id="mistakes"></h4>
                 <form name="frm" method="post" action="checkout.jsp">
                     <input type="text" placeholder="First Name" name="fName">
                     <input type="text" placeholder="Last Name" name="lName"><br>
@@ -75,20 +73,20 @@
             parameters. if any were not given, it will ask the user to enter
             all of the required fields */
             function submitBtn(){
-             if ("fName" = null){
-                out.println("Please Enter Your First Name.");
-             } else if ("lName" = null){
-                out.println("Please Enter Your Last Name.");   
-             } else if ("street" = null){
-                out.println("Please Enter Your Street Address.")
-             } else if ("state" = null){
-                out.println("Please Enter Your State.")
-             } else if ("zip" = null){
-                out.println("Please Enter Your Zip Code.")
-             } else if ("phone" = null){
-                out.println("Please Enter Your Phone Number.")
-             } else if ("email" = null){
-                out.println("Please Enter Your Email Address.")
+             if (document.getElementById("fName") === null){
+                document.getElementById("mistakes").outerHTML = "Please Enter Your First Name."
+             } else if ("lName" === null){
+                //out.println("Please Enter Your Last Name.");   
+             } else if ("street" === null){
+                //out.println("Please Enter Your Street Address.")
+             } else if ("state" === null){
+                //out.println("Please Enter Your State.")
+             } else if ("zip" === null){
+                //out.println("Please Enter Your Zip Code.")
+             } else if ("phone" === null){
+                //out.println("Please Enter Your Phone Number.")
+             } else if ("email" === null){
+                //out.println("Please Enter Your Email Address.")
              } else {
                 /*Send information to Echo Server using socket
                  *Read true, or false from socket
@@ -102,18 +100,30 @@
                 getShippingCost(value);
             }
             
-            function toCheckout() {
-                window.document.location.href="checkout.jsp";
-            }
-            function toDBServlet(productNum) {
+            //function toCheckout() {
+            //    window.document.location.href="checkout.jsp";
+            //}
+            //function toDBServlet(productNum) {
                 //document.forms[0].createAttribute("ProductInfo");
                 //document.forms[0].setAttribute("ProductInfo", productNum);
-                document.forms[0].action = "DBServlet";
-                document.forms[0].submit();
-            }
+           //    document.forms[0].action = "DBServlet";
+           //     document.forms[0].submit();
+          //  }
             //function toProduct() {
             //window.document.location.href="product.jsp";
             //}
+            
+
+            function getCookie() {
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    //while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    document.write(c.substring(c.length));
+                }
+                //return null;
+            }
+              
             
         </script>
     </body>  
