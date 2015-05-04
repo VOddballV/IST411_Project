@@ -45,6 +45,7 @@
                 // sets the cookie cookie1/
                 document.cookie = document.getElementById("Name")
                 
+                
             document.location.href="checkout.jsp";
         }
 
