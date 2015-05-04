@@ -49,10 +49,9 @@
                 Cookies.set('UserCart', itemAdd + " \n "); 
                 document.location.href="checkout.jsp";                     
                 } else {
-                Cookies.set('UserCart', itemAdd + " \n " + history); 
+                Cookies.set('UserCart', itemAdd + " ," + history); 
                 document.location.href="checkout.jsp";
                 } 
-               
             }
         
 
