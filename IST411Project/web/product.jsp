@@ -33,21 +33,28 @@
                     </p>
                 </productDescriptionBox>
             </div>
-                    <button type="button" onclick="buy()"> BUY </button>
+                    <button type="button" onclick='buy()'> BUY </button>
             <div id="footer">
                 <p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
             </div>
 	</div>
     </body>
+    <script src='Cookies.js' type="text/javascript"></script>
     <script>
             function buy() {
-                
+                var itemAdd = document.getElementById('Name').textContent;
                 // sets the cookie cookie1/
-                document.cookie = document.getElementById("Name")
-                
-                
-            document.location.href="checkout.jsp";
-        }
+                var history = Cookies.get('UserCart');
+                if(history === undefined){
+                Cookies.set('UserCart', itemAdd + " \n "); 
+                document.location.href="checkout.jsp";                     
+                } else {
+                Cookies.set('UserCart', itemAdd + " \n " + history); 
+                document.location.href="checkout.jsp";
+                } 
+               
+            }
+        
 
     </script>
 </html>

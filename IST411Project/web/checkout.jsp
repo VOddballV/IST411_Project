@@ -29,7 +29,10 @@
                 <br>
                 <h1>Shopping Cart</h1>
                 <br>
-                <h1 id="cart" onload='getCookie()'></h1>
+                <h1 id='cart' onLoad='getCookie()'></h1>
+                <script src='Cookies.js' type="text/javascript">
+
+                </script>
                 <hr>
                 <br>
                 <h3>Choose Shipping:</h3><br>
@@ -132,19 +135,11 @@
             //function toProduct() {
             //window.document.location.href="product.jsp";
             //}
-     
-            function getCookie() {
-                var ca = document.cookie.split(';');
-                for(var i=0;i < ca.length;i++) {
-                    var c = ca[i];
-                    //while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                    document.getElementById("cart").textContent = c.valueOf();
-                    //document.write(c.substring(c.length));
-                }
-                //return null;
-            }
-              
             
+            //Gets the cookie that holds the users cart
+            var myCart = Cookies.get('UserCart');
+            document.getElementById('cart').textContent = myCart;
+
         </script>
     </body>  
 </html>
