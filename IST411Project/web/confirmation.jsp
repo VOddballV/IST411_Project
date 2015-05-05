@@ -27,16 +27,23 @@
             <div id="productWrapper">
                 <h1>Order Confirmation</h1>
                 <br>
-                <h2>Shopping Cart</h2>
+                <hr>
+                <br>
+                <h2>Shopping Cart:</h2>
                 <br>
                 <h1 id='cart' onLoad='getCookie()'></h1>
                 <script src='Cookies.js' type="text/javascript">
                 </script>
+                <h3>Subtotal: $</h3>
                 
+                <br>
                 <hr>
                 <br>
-                <h2>Shipping: <%= request.getAttribute("myShippingCostJSP") %></h2>
-                
+                <h3>Shipping: $<%= request.getAttribute("myShippingCostJSP") %></h3>
+                <br>
+                <hr>
+                <br>
+                <h2>Total: $<%= request.getAttribute("myShippingCostJSP") %></h2>
                     
                 
             </div>
