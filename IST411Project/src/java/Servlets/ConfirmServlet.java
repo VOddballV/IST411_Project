@@ -41,15 +41,39 @@ public class ConfirmServlet extends HttpServlet {
 
         try {
 
-            String confirmationNum;
-            confirmationNum = (String) req.getParameter("cardNumber");
-            
+            String cardNumber;
+            cardNumber = (String) req.getParameter("cardNumber");
+            req.setAttribute("cardNumber", cardNumber);
             
             
             
             int choice = Integer.parseInt(req.getParameter("shippingChoice"));
             myShippingCost = getShippingCost(choice);
             req.setAttribute("myShippingCostJSP", myShippingCost);
+            
+            String fName = req.getParameter("fName");
+            req.setAttribute("fName", fName);
+            
+            String lName = req.getParameter("lName");
+            req.setAttribute("lName", lName);
+            
+            String street = req.getParameter("street");
+            req.setAttribute("street", street);
+            
+            String state = req.getParameter("state");
+            req.setAttribute("state", state);
+            
+            String zip = req.getParameter("zip");
+            req.setAttribute("zip", zip);
+            
+            String phone = req.getParameter("phone");
+            req.setAttribute("phone", phone);
+            
+            String email = req.getParameter("email");
+            req.setAttribute("email", email);
+            
+            String paymentType = req.getParameter("paymentType");
+            req.setAttribute("paymentType", paymentType);
             
             getServletContext().getRequestDispatcher("/confirmation.jsp").forward(req,res);
 

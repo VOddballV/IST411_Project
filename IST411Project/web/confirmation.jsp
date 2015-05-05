@@ -31,12 +31,12 @@
                 <br>
                 <h2>Customer Information:</h2>
                 <br>
-                <h3>Name: </h3>
-                <h3>Address: </h3>
-                <h3>Phone: </h3>
-                <h3>Email: </h3>
-                <h3>Payment Type: </h3>
-                <h3>Last 4 Digits: </h3>
+                <h3>Name: <%= request.getAttribute("fName") %> <%= request.getAttribute("lName") %></h3>
+                <h3>Address: <%= request.getAttribute("street") %>, <%= request.getAttribute("state") %>, <%= request.getAttribute("zip") %></h3>
+                <h3>Phone: <%= request.getAttribute("phone") %></h3>
+                <h3>Email: <%= request.getAttribute("email") %></h3>
+                <h3>Payment Type: Credit</h3>
+                <h3>Card Number: <%= request.getAttribute("cardNumber") %></h3>
                 <br>
                 <hr>
                 <br>
@@ -45,7 +45,7 @@
                 <h1 id='cart' onLoad='getCookie()'></h1>
                 <script src='Cookies.js' type="text/javascript">
                 </script>
-                <h3>Subtotal: $</h3>
+                <h3>Subtotal: $9.99</h3>
                 
                 <br>
                 <hr>

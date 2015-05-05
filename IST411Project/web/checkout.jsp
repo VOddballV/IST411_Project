@@ -56,7 +56,7 @@
                     <input type="text" placeholder="Email" name="email" id='email'><br><br>
 
                     <select>
-                        <option value="Credit">Credit</option>
+                        <option name="paymentType" value="Credit">Credit</option>
                     </select>
                     <input type="text" placeholder="Credit Card Number" name="cardNumber"><br><br>
                     <hr>
