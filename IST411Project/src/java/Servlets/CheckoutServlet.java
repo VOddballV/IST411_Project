@@ -36,20 +36,16 @@ public class CheckoutServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CheckoutServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CheckoutServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        try {
             
             int choice = Integer.parseInt(request.getParameter("shippingChoice"));
-            getShippingCost(choice);
+            int myShippingCost = getShippingCost(choice);
+            request.setAttribute("myShippingCostJSP", myShippingCost);
+            
+            getServletContext().getRequestDispatcher("/Confirmation.jsp").forward(request,response);
+        }
+        catch(Exception e){
+            
         }
     }
 
