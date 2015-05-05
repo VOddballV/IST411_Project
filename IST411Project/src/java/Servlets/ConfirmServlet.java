@@ -27,7 +27,8 @@ import javax.xml.ws.WebServiceRef;
  */
 //@WebServlet(urlPatterns = {"/DBServlet"})
 public class ConfirmServlet extends HttpServlet {
-
+    private ShippingWebService_Service service;
+    public int myShippingCost;
     
     public void doGet(HttpServletRequest req, HttpServletResponse res)
     throws ServletException, IOException  {
@@ -36,6 +37,15 @@ public class ConfirmServlet extends HttpServlet {
 
             String confirmationNum;
             confirmationNum = (String) req.getParameter("ConfirmationInfo");
+            
+            
+            
+            
+            int choice = Integer.parseInt(req.getParameter("shippingChoice"));
+            myShippingCost = getShippingCost(choice);
+            req.setAttribute("myShippingCostJSP", myShippingCost);
+            
+            getServletContext().getRequestDispatcher("/Confirmation.jsp").forward(req,res);
 
         } catch (Exception e) {
           // TODO Auto-generated catch block
@@ -50,6 +60,15 @@ public class ConfirmServlet extends HttpServlet {
 
 
     }
+
+    private int getShippingCost(int getShippingCost) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        ShippingClient.ShippingWebService port = service.getShippingWebServicePort();
+        return port.getShippingCost(getShippingCost);
+    }
+
+
 
 }
 

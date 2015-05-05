@@ -38,7 +38,7 @@
                 <h3>Enter Information:</h3>
                 <br>
                 
-                <form name="frm" method="post" action="checkout.jsp">
+                <form name="frm" method="get">
                     
                     <h3>Choose Shipping:</h3><br>
                     <input type="radio" name="shippingChoice" value="1" checked> Ground Shipping<br>
@@ -61,6 +61,7 @@
                     <input type="text" placeholder="Credit Card Number" name="cardNumber"><br><br>
                     <hr>
                     <br>
+                    
                     <button type="button" onclick="submitBtn()">Submit</button><br>
                 </form>
             </div>
@@ -69,7 +70,10 @@
             </div>
         </div>
         <script>    
-            /* This code will check to see if the user has given the required
+            /* 
+             * <button type="button" onclick="submitBtn()">Submit</button><br>
+             * 
+             * This code will check to see if the user has given the required
             parameters. if any were not given, it will ask the user to enter
             all of the required fields */
             
@@ -108,8 +112,8 @@
                  *Read true, or false from socket
                  *If true, then go to confirmation page
                  *If flase, display invalid card number*/
-                //document.forms[0].action = "ConfirmServlet";
-                //document.forms[0].submit();
+                document.forms[0].action = "ConfirmServlet";
+                document.forms[0].submit();
 
              } //end if else
             
