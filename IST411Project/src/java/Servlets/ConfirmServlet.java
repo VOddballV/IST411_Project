@@ -42,7 +42,7 @@ public class ConfirmServlet extends HttpServlet {
         try {
 
             String confirmationNum;
-            confirmationNum = (String) req.getParameter("ConfirmationInfo");
+            confirmationNum = (String) req.getParameter("cardNumber");
             
             
             
