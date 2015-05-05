@@ -35,7 +35,7 @@
                 
                 <hr>
                 <br>
-                <h2>Shipping: <%= request.getAttribute("myShippingChoiceJSP") %></h2>
+                <h2>Shipping: <%= request.getAttribute("myShippingCostJSP") %></h2>
                 
                     
                 

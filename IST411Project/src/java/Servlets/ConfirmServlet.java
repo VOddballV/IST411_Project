@@ -5,6 +5,7 @@
  */
 package Servlets;
 
+
 import ShippingClient.ShippingWebService_Service;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,12 +22,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.WebServiceRef;
 
+
 /**
  *
  * @author JCarder
  */
 //@WebServlet(urlPatterns = {"/DBServlet"})
 public class ConfirmServlet extends HttpServlet {
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/ShippingWebService/ShippingWebService.wsdl")
+    private ShippingWebService_Service service_2;
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/ShippingWebService/ShippingWebService.wsdl")
+    private ShippingWebService_Service service_1;
     private ShippingWebService_Service service;
     public int myShippingCost;
     
@@ -45,7 +51,7 @@ public class ConfirmServlet extends HttpServlet {
             myShippingCost = getShippingCost(choice);
             req.setAttribute("myShippingCostJSP", myShippingCost);
             
-            getServletContext().getRequestDispatcher("/Confirmation.jsp").forward(req,res);
+            getServletContext().getRequestDispatcher("/confirmation.jsp").forward(req,res);
 
         } catch (Exception e) {
           // TODO Auto-generated catch block
@@ -64,9 +70,15 @@ public class ConfirmServlet extends HttpServlet {
     private int getShippingCost(int getShippingCost) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
-        ShippingClient.ShippingWebService port = service.getShippingWebServicePort();
+        ShippingClient.ShippingWebService port = service_2.getShippingWebServicePort();
         return port.getShippingCost(getShippingCost);
     }
+
+
+
+    
+    
+   
 
 
 

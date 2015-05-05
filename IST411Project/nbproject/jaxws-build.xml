@@ -10,23 +10,6 @@
                 JAX-WS WSGEN SECTION
                 ===================
             -->
-    <target name="wsgen-init" depends="init, -do-compile">
-        <mkdir dir="${build.generated.sources.dir}/jax-ws/resources/"/>
-        <mkdir dir="${build.classes.dir}"/>
-        <mkdir dir="${build.classes.dir}/META-INF"/>
-        <property name="j2ee.platform.wsgen.classpath" value="${libs.jaxws21.classpath}"/>
-        <taskdef name="wsgen" classname="com.sun.tools.ws.ant.WsGen">
-            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
-        </taskdef>
-    </target>
-    <target name="wsgen-ShippingWebService" depends="wsgen-init">
-        <copy todir="${build.classes.dir}/META-INF">
-            <fileset dir="${webinf.dir}" includes="wsit-ShippingWebPackage.ShippingWebService.xml"/>
-        </copy>
-        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="ShippingWebPackage.ShippingWebService" xendorsed="true">
-            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
-        </wsgen>
-    </target>
     <!--
                 ===================
                 JAX-WS WSIMPORT SECTION
@@ -45,8 +28,8 @@
     </target>
     <target name="wsimport-client-ShippingWebService" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/ShippingWebService"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ShippingWebService" destdir="${build.generated.dir}/jax-wsCache/ShippingWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ShippingWebService/wsdl/localhost_8080/IST411Project/ShippingWebService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/IST411Project/ShippingWebService?WSDL" xnocompile="true" xendorsed="true" package="ShippingClient">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ShippingWebService/wsdl/localhost_8080/IST411Project/ShippingWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ShippingWebService" destdir="${build.generated.dir}/jax-wsCache/ShippingWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ShippingWebService/wsdl/localhost_8080/ShippingWebService/ShippingWebService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShippingWebService/ShippingWebService?WSDL" xnocompile="true" xendorsed="true" package="ShippingClient">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ShippingWebService/wsdl/localhost_8080/ShippingWebService/ShippingWebService.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/ShippingWebService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
