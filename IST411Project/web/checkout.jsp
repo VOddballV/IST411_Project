@@ -35,21 +35,18 @@
                 </script>
                 <hr>
                 <br>
-                <h3>Choose Shipping:</h3><br>
-                <form>
-                    <input type="radio" name="shippingChoice" value="1" checked> Ground Shipping<br>
-                    <input type="radio" name="shippingChoice" value="2"> 2 Day Shipping<br>
-                    <input type="radio" name="shippingChoice" value="3"> Next Day Shipping<br><br>
-                    <input type="text" name="cost" placeholder="Your Shipping Cost" readonly>
-                    <button name="update" onclick="updateShippingCost()">Update</button>
-                </form>
-                <br>
-                <hr>
-                <br>
                 <h3>Enter Information:</h3>
                 <br>
                 <h4 id="mistakes"></h4>
                 <form name="frm" method="post" action="checkout.jsp">
+                    
+                    <h3>Choose Shipping:</h3><br>
+                    <input type="radio" name="shippingChoice" value="1" checked> Ground Shipping<br>
+                    <input type="radio" name="shippingChoice" value="2"> 2 Day Shipping<br>
+                    <input type="radio" name="shippingChoice" value="3"> Next Day Shipping<br><br>
+                    <input type="text" name="cost" placeholder="Your Shipping Cost" readonly>
+                    <hr>
+                    
                     <input type="text" placeholder="First Name" name="fName" id='fName'>
                     <input type="text" placeholder="Last Name" name="lName" id='lName'><br> 
                     <input type="text" placeholder="Street Address" name="street" id='street'>
