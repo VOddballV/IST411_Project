@@ -29,6 +29,17 @@
                 <br>
                 <hr>
                 <br>
+                <h2>Customer Information:</h2>
+                <br>
+                <h3>Name: </h3>
+                <h3>Address: </h3>
+                <h3>Phone: </h3>
+                <h3>Email: </h3>
+                <h3>Payment Type: </h3>
+                <h3>Last 4 Digits: </h3>
+                <br>
+                <hr>
+                <br>
                 <h2>Shopping Cart:</h2>
                 <br>
                 <h1 id='cart' onLoad='getCookie()'></h1>
@@ -39,10 +50,11 @@
                 <br>
                 <hr>
                 <br>
-                <h3>Shipping: $<%= request.getAttribute("myShippingCostJSP") %></h3>
+                <h3>Shipping Cost: $<%= request.getAttribute("myShippingCostJSP") %></h3>
                 <br>
                 <hr>
                 <br>
+                
                 <h2>Total: $<%= request.getAttribute("myShippingCostJSP") %></h2>
                     
                 
