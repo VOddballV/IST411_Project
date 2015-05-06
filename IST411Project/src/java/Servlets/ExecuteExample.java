@@ -77,7 +77,7 @@ public class ExecuteExample
             //Resultset gives us what the database gets as a resultn of query
             //Query contians SQL query
             resultSet = stmt.executeQuery(
-                    "SELECT productname, productimagelink, productdesc FROM Products " +
+                    "SELECT productname, productimagelink, productdesc, productprice FROM Products " +
                     "WHERE ProductID = " + productID);
             //Resultset.next converts result from database for each row
             while (resultSet.next()) {

@@ -33,6 +33,7 @@
                 <script src='Cookies.js' type="text/javascript">
 
                 </script>
+                <button onclick="clearCart()">Clear Cart</button>
                 <hr>
                 <br>
                 <h3>Enter Information:</h3>
@@ -140,6 +141,12 @@
             //Gets the cookie that holds the users cart
             var myCart = Cookies.get('UserCart');
             document.getElementById('cart').textContent = myCart;
+            
+            function clearCart() {
+                var emptyCart = Cookies.set('UserCart', "")
+                document.getElementById('cart').textContent = emptyCart;
+                return false;
+            }
 
         </script>
     </body>  
