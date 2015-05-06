@@ -36,7 +36,7 @@
                 <h3>Phone: <%= request.getAttribute("phone") %></h3>
                 <h3>Email: <%= request.getAttribute("email") %></h3>
                 <h3>Payment Type: Credit</h3>
-                <h3>Card Number: <%= request.getAttribute("cardNumber") %></h3>
+                <h3>Card Verification: <%= request.getAttribute("verify") %></h3>
                 <br>
                 <hr>
                 <br>
