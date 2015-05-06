@@ -63,14 +63,16 @@
                 <hr>
                 <br>
                 
-                <h2 id='total'></h2>
-                    
-                
+                <h2 id='total'></h2> 
+            </div>
+
+            <script>
+                var totalAmountPaid = Cookies.get('UsersTotal')
+                document.getElementById('total').textContent = "Total: $" + totalAmountPaid;
+            </script>
+            <div id="footer">
+                <p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
             </div>
         </div>
-                <script>
-                    var totalAmountPaid = Cookies.get('UsersTotal')
-                    document.getElementById('total').textContent = "Total: $" + totalAmountPaid;
-                </script>
     </body>
 </html>
