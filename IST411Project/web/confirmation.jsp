@@ -45,12 +45,12 @@
                 <h1 id='cart' onLoad='getCookie()'></h1>
                 <script src='Cookies.js' type="text/javascript">
                 </script>
-                <h3>Subtotal: $9.99</h3>
+                <h3 id='subTotal'></h3>
                 
                 <br>
                 <hr>
                 <br>
-                <h3>Shipping Cost: $<%= request.getAttribute("myShippingCostJSP") %></h3>
+                <h3 id='shipping'>Shipping Cost: $<%= request.getAttribute("myShippingCostJSP") %></h3>
                 <br>
                 <hr>
                 <br>
@@ -61,8 +61,10 @@
             </div>
         </div>
                 <script>
-                    var totalAmountPaid = Cookies.get('UsersTotal')
-                    document.getElementById('total').textContent = "Total: $" + totalAmountPaid;
+                    var totalAmountPaid = Cookies.get('UsersTotal');
+                    var shippingCost = <%= request.getAttribute("myShippingCostJSP")%>;
+                    document.getElementById('total').textContent = "Total: $" + totalAmountPaid + " + Shipping";
+                    document.getElementById('subTotal').textContent = "Subtotal: " + totalAmountPaid;
                 </script>
     </body>
 </html>
