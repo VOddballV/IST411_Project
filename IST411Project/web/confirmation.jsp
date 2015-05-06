@@ -55,10 +55,14 @@
                 <hr>
                 <br>
                 
-                <h2>Total: $<%= request.getAttribute("myShippingCostJSP") %></h2>
+                <h2 id='total'></h2>
                     
                 
             </div>
         </div>
+                <script>
+                    var totalAmountPaid = Cookies.get('UsersTotal')
+                    document.getElementById('total').textContent = "Total: $" + totalAmountPaid;
+                </script>
     </body>
 </html>
