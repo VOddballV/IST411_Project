@@ -26,7 +26,7 @@
                 <product>
                 <a href="#"><img src="Resources/<%= request.getAttribute("imageLinkJSP") %>"  alt=""/></a>
                     <h1 id="Name"><%= request.getAttribute("productNameJSP") %></h1>
-                    <p>$9.99</p>
+                    <p id="Price">$<%= request.getAttribute("productPriceJSP") %> </p>
                 </product>
                 <productDescriptionBox>
                     <p><%= request.getAttribute("productDescJSP") %>
@@ -43,14 +43,26 @@
     <script>
             function buy() {
                 var itemAdd = document.getElementById('Name').textContent;
+                var itemAddPrice = document.getElementById('Price').textContent
+                var itemOriginalPrice = <%= request.getAttribute("productPriceJSP") %>
                 // sets the cookie cookie1/
                 var history = Cookies.get('UserCart');
+                var total = Cookies.get('UsersTotal');
+                var itemPriceInt = parseInt(itemOriginalPrice);
+                var totalPrice = parseInt(total)
                 if(history === undefined){
-                Cookies.set('UserCart', itemAdd + " \n "); 
+                Cookies.set('UserCart', itemAdd + "(" + itemAddPrice + ")"); 
+                Cookies.set('UsersTotal', itemPriceInt)
+                console.log(itemPriceInt);
                 document.location.href="checkout.jsp";                     
                 } else {
-                Cookies.set('UserCart', itemAdd + " ," + history); 
+                
+                Cookies.set('UserCart', itemAdd + "(" + itemAddPrice + ")" + ", " + history);
+                Cookies.set('UsersTotal', itemPriceInt + totalPrice);
+                console.log(itemPriceInt);
+                console.log(totalPrice);
                 document.location.href="checkout.jsp";
+                
                 } 
             }
         

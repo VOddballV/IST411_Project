@@ -21,6 +21,8 @@ public class ExecuteExample
     public static String productName;
     public static String imageLink;
     public static String productDesc;
+    public static String productPrice;
+    
     public static ResultSet resultSet;
     
     public static List main (String productID) 
@@ -75,13 +77,14 @@ public class ExecuteExample
             //Resultset gives us what the database gets as a resultn of query
             //Query contians SQL query
             resultSet = stmt.executeQuery(
-                    "SELECT productname, productimagelink, productdesc FROM Products " +
+                    "SELECT productname, productimagelink, productdesc, productprice FROM Products " +
                     "WHERE ProductID = " + productID);
             //Resultset.next converts result from database for each row
             while (resultSet.next()) {
             productName = resultSet.getString("productName");
             imageLink = resultSet.getString("productimageLink");
             productDesc = resultSet.getString("productdesc");
+            productPrice = resultSet.getString("productprice");
             }
             stmt.close();//Closes statement
             con.close();//Closes connection to database
@@ -94,6 +97,7 @@ public class ExecuteExample
         myList.add(productName);
         myList.add(imageLink);
         myList.add(productDesc);
+        myList.add(productPrice);
         return myList;
     }
 
