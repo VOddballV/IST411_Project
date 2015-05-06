@@ -21,6 +21,8 @@ public class ExecuteExample
     public static String productName;
     public static String imageLink;
     public static String productDesc;
+    public static String productPrice;
+    
     public static ResultSet resultSet;
     
     public static List main (String productID) 
@@ -82,6 +84,7 @@ public class ExecuteExample
             productName = resultSet.getString("productName");
             imageLink = resultSet.getString("productimageLink");
             productDesc = resultSet.getString("productdesc");
+            productPrice = resultSet.getString("productprice");
             }
             stmt.close();//Closes statement
             con.close();//Closes connection to database
@@ -94,6 +97,7 @@ public class ExecuteExample
         myList.add(productName);
         myList.add(imageLink);
         myList.add(productDesc);
+        myList.add(productPrice);
         return myList;
     }
 

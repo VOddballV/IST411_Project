@@ -25,15 +25,13 @@
             <div id="productWrapper">
                 <product>
                             <h1>Graphics Card</h1>
-                            <p>$9.99</p>
                             <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(0)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="1" >
                             </form>
                 </product>
                 <product>
-                        <h1>Hard Drive</h1>
-                        <p>$9.99</p>
+                        <h1>Hard Drive</h1> 
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(1)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="2" >
@@ -41,7 +39,6 @@
                 </product>
                 <product class="rightcl">
                         <h1>Case</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(2)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="3" >
@@ -49,7 +46,6 @@
                 </product>
                 <product>
                         <h1>Bloodborne</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(3)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="4" >
@@ -57,7 +53,6 @@
                 </product>
                 <product>
                         <h1>Fallout 4</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(4)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="5" >
@@ -65,7 +60,6 @@
                 </product>
                 <product class="rightcl">
                         <h1>Spy Fox</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(5)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="6" >
@@ -73,7 +67,6 @@
                 </product>
                 <product>
                         <h1>PC</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(6)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="7" >
@@ -81,7 +74,6 @@
                 </product>
                 <product>
                         <h1>PS4</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(7)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="8" >
@@ -89,7 +81,6 @@
                 </product>
                 <product class="rightcl">
                         <h1>XboxOne</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(8)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="9" >
@@ -97,7 +88,6 @@
                 </product>
                 <product class="rightcl">
                         <h1>Atari</h1>
-                        <p>$9.99</p>
                         <form method="get">
                             <a href="#" class="viewProduct" onclick="toDBServlet(9)">View Product</a>
                             <input type="hidden" name="ProductInfo" parameter="ProductInfo" value="10" >
