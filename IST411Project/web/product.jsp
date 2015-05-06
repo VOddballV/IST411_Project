@@ -32,8 +32,10 @@
                     <p><%= request.getAttribute("productDescJSP") %>
                     </p>
                 </productDescriptionBox>
-            </div>
+                    <br>
                     <button type="button" onclick='buy()'> BUY </button>
+            </div>
+                    
             <div id="footer">
                 <p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
             </div>
@@ -43,7 +45,7 @@
     <script>
             function buy() {
                 var itemAdd = document.getElementById('Name').textContent;
-                var itemAddPrice = document.getElementById('Price').textContent
+                var itemAddPrice = document.getElementById('Price').textContent;
                 var itemOriginalPrice = <%= request.getAttribute("productPriceJSP") %>
                 // sets the cookie cookie1/
                 var history = Cookies.get('UserCart');

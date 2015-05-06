@@ -143,7 +143,8 @@
             document.getElementById('cart').textContent = myCart;
             
             function clearCart() {
-                var emptyCart = Cookies.set('UserCart', "")
+                var emptyCart = Cookies.set('UserCart', "");
+                Cookies.set('UsersTotal', "");
                 document.getElementById('cart').textContent = emptyCart;
                 return false;
             }
