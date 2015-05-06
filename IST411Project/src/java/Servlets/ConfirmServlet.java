@@ -21,7 +21,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.WebServiceRef;
-
+import java.net.*;
+import java.io.*;
 
 /**
  *
@@ -35,15 +36,27 @@ public class ConfirmServlet extends HttpServlet {
     private ShippingWebService_Service service_1;
     private ShippingWebService_Service service;
     public int myShippingCost;
+    public Socket socket;
     
     public void doGet(HttpServletRequest req, HttpServletResponse res)
     throws ServletException, IOException  {
 
         try {
-
-            String cardNumber;
-            cardNumber = (String) req.getParameter("cardNumber");
-            req.setAttribute("cardNumber", cardNumber);
+            String confirmationNum;
+            confirmationNum = (String) req.getParameter("cardNumber");
+           
+            String url="localhost";
+            int port =10001;
+            socket = new Socket(url, port);
+            
+            PaymentGateway.ClientServer.staticWriteSocket(socket, confirmationNum);
+            System.out.println("Wrote to Socket: " + confirmationNum + ".");
+            
+            String verify = PaymentGateway.ClientServer.staticReadSocket(socket);
+            System.out.println("Read from socket: " + verify + ".");
+            
+            
+            req.setAttribute("verify", verify);
             
             
             
