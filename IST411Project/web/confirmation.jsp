@@ -35,6 +35,11 @@
                 <h3>Address: <%= request.getAttribute("street") %>, <%= request.getAttribute("state") %>, <%= request.getAttribute("zip") %></h3>
                 <h3>Phone: <%= request.getAttribute("phone") %></h3>
                 <h3>Email: <%= request.getAttribute("email") %></h3>
+                <br>
+                <hr>
+                <br>
+                <h2>Payment Information:</h2>
+                <br>
                 <h3>Payment Type: Credit</h3>
                 <h3>Card Verification: <%= request.getAttribute("verify") %></h3>
                 <br>
@@ -50,6 +55,9 @@
                 <br>
                 <hr>
                 <br>
+                <h2>Shipping Information:</h2>
+                <br>
+                <h3>Shipping Address: <%= request.getAttribute("street") %>, <%= request.getAttribute("state") %>, <%= request.getAttribute("zip") %></h3>
                 <h3>Shipping Cost: $<%= request.getAttribute("myShippingCostJSP") %></h3>
                 <br>
                 <hr>
