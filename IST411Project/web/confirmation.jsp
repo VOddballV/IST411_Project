@@ -65,16 +65,18 @@
                 <hr>
                 <br>
                 
-                <h2 id='total'></h2>
-                    
-                
+                <h2 id='total'></h2> 
             </div>
-        </div>
+
                 <script>
                     var totalAmountPaid = Cookies.get('UsersTotal');
                     var shippingCost = <%= request.getAttribute("myShippingCostJSP")%>;
                     document.getElementById('total').textContent = "Total: $" + totalAmountPaid + " + Shipping";
                     document.getElementById('subTotal').textContent = "Subtotal: $" + totalAmountPaid;
                 </script>
+            <div id="footer">
+                <p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
+            </div>
+        </div>
     </body>
 </html>
