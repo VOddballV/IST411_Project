@@ -70,7 +70,6 @@
 
                 <script>
                     var totalAmountPaid = Cookies.get('UsersTotal');
-                    var shippingCost = <%= request.getAttribute("myShippingCostJSP")%>;
                     document.getElementById('total').textContent = "Total: $" + totalAmountPaid + " + Shipping";
                     document.getElementById('subTotal').textContent = "Subtotal: $" + totalAmountPaid;
                 </script>

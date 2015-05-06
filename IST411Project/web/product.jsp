@@ -49,9 +49,9 @@
                 var itemOriginalPrice = <%= request.getAttribute("productPriceJSP") %>
                 // sets the cookie cookie1/
                 var history = Cookies.get('UserCart');
-                var total = Cookies.get('UsersTotal');
+                
                 var itemPriceInt = parseInt(itemOriginalPrice);
-                var totalPrice = parseInt(total)
+                var total = Cookies.get('UsersTotal');
                 if(history === undefined){
                 Cookies.set('UserCart', itemAdd + "(" + itemAddPrice + ")"); 
                 Cookies.set('UsersTotal', itemPriceInt)
@@ -59,6 +59,7 @@
                 document.location.href="checkout.jsp";                     
                 } else {
                 
+                var totalPrice = parseInt(total)
                 Cookies.set('UserCart', itemAdd + "(" + itemAddPrice + ")" + ", " + history);
                 Cookies.set('UsersTotal', itemPriceInt + totalPrice);
                 console.log(itemPriceInt);

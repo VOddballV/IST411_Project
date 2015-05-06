@@ -148,6 +148,10 @@
                 document.getElementById('cart').textContent = emptyCart;
                 return false;
             }
+            var cardMsg = <%= request.getAttribute("invalidCardJSP") %>;
+            if(cardMsg !== null){
+                window.alert(cardMsg);
+            }
 
         </script>
     </body>  

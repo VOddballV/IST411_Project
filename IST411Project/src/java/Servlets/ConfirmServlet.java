@@ -57,7 +57,10 @@ public class ConfirmServlet extends HttpServlet {
             
             
             req.setAttribute("verify", verify);
-            
+            if("invalid".equals(verify)){
+                req.setAttribute("invalidCardJSP", "Invalid Credit Card Number");
+                getServletContext().getRequestDispatcher("/checkout.jsp").forward(req,res);
+            }
             
             
             int choice = Integer.parseInt(req.getParameter("shippingChoice"));
