@@ -98,16 +98,25 @@
                 <p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
             </div>
 	</div>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script>
                 function toCheckout() {
                     window.document.location.href="checkout.jsp";
                 }
+<<<<<<< Updated upstream
                 function toDBServlet(productNum) {
                     //integer productNumSend = productNum;
                     //document.forms[0].createAttribute("ProductInfo");
                     //document.forms[0].setAttribute("ProductInfo", productNum);
                     document.forms[productNum].action = "DBServlet";
                     document.forms[productNum].submit();
+=======
+                function toProduct(int IDnum) {
+                        $.get('DBServlet', function(data) {
+                        alert(data);
+                        });
+                //window.document.location.href="product.jsp";
+>>>>>>> Stashed changes
                 }
                 //function toProduct() {
                 //window.document.location.href="product.jsp";
